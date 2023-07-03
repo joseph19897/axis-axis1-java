@@ -17,13 +17,11 @@ notifications:
   email:
     # java-dev@axis.apache.org doesn't work here because it's not an address registered on GitHub.
     - veithen@apache.org
-before_deploy:
-  - export RELEASE_JAR_FILE=$(ls build/libs/*.jar)
 
 deploy:
   provider: releases
-  api_key: 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
-  file: $RELEASE_JAR_FILE
+  api_key: $GIT_TOKEN
+  file: /home/travis/build/joseph19897/axis-axis1-java/target/axis-project-1.4.1-SNAPSHOT-source-release.zip
   skip_cleanup: true
   on:
     tags: true
