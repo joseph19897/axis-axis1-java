@@ -29,7 +29,9 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - name: Publish to GitHub Packages
-      run: mvn --batch-mode deploy
-      env:
-        GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+    - name: Easy Zip Files
+      uses: vimtor/action-zip@v1.1
+      with: 
+        files: axis-axis1-java
+        dest: result.zip
+
