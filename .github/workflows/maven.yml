@@ -32,6 +32,6 @@ jobs:
     - name: Easy Zip Files
       uses: vimtor/action-zip@v1.1
       with: 
-        files: axis-axis1-java
+        files: /home/runner/work/axis-axis1-java
         dest: result.zip
 
